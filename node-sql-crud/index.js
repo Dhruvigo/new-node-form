@@ -135,6 +135,9 @@ app.delete("/users/:id", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+app.get("/", (req, res) => {
+    res.redirect("/users");
+});
 
 // Start server
 app.listen(3000, () => console.log("Server1 running on port 3000"));
